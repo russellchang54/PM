@@ -9,3 +9,6 @@ find . -maxdepth 1 -name 'zheng*'
 
 //直到没有 类似 “No such file or directory” 报错为止~
 for file in `find . -name 'zheng*' `; do mv $file ${file/zheng/ebey};done
+
+//替换文本
+sed -i 's/zheng/ebey/g' `grep -rl -n -w 'zheng' *`
